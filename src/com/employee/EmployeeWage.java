@@ -10,14 +10,17 @@ public class EmployeeWage {
 		System.out.println("Welcome to Employee Wage Computation Program");
 		int empDailyWage;
 		int empHour;
-		double empstatus = Math.floor(Math.random() * 10) % 3;
-		if(empstatus == IS_FULL_TIME) {
+		int empstatus = (int) Math.floor(Math.random() * 10) % 3;
+		switch(empstatus) {
+		case IS_FULL_TIME:
 			System.out.println("Full Time Employee");
 			empHour = 8;
-		} else if(empstatus == IS_PART_TIME) {
+			break;
+		case IS_PART_TIME:
 			System.out.println("Part Time Employee");
 			empHour = 4;
-		} else {
+			break;
+		default:
 			empHour = 0;
 		}
 		empDailyWage = WAGE_PER_HOUR * empHour;

@@ -9,10 +9,9 @@ public class EmployeeWage {
 	public static void main(String[] args) {
 		
 		System.out.println("Welcome to Employee Wage Computation Program");
-		Employee yml = new Employee("YML", 150, 25, 120);
-		Employee abc = new Employee("ABC", 120, 22, 100);
-		yml.empWageBuilder();
-		abc.empWageBuilder();
-		System.out.println(yml);
+		EmpWageBuilder empWageBuilder = new EmpWageBuilder();
+		empWageBuilder.addCompany("YML", 150, 25, 120);
+		empWageBuilder.addCompany("ABC", 120, 22, 100);
+		empWageBuilder.calculateWage();
 	}
 }

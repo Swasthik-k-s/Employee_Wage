@@ -4,9 +4,8 @@ public class EmployeeWage {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to Employee Wage Computation Program");
-		Employee employee = new Employee();
-		employee.Attendance();
-		employee.TotalWage();
+		Employee.calculateWage("YML", 150, 25, 120);
+		Employee.calculateWage("ABC", 120, 22, 100);
 	}
 
 }

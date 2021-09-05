@@ -1,6 +1,6 @@
 package com.employee;
 
-public class EmpWageBuilder {
+public class EmpWageBuilder implements ComputeEmpWage{
 	final static int IS_FULL_TIME = 1;
 	final static int IS_PART_TIME = 2;
 	

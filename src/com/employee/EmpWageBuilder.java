@@ -57,6 +57,14 @@ public class EmpWageBuilder implements ComputeEmpWage{
 		}
 		
 	}
+	
+	public void getTotalWage(String companyName) {
+		for(CompanyEmpWage company: companies) {
+			if(companyName.equals(company.companyName)) {
+				System.out.println(company.getEmpTotalWage());
+			}
+		}
+	}
 }
 
 //Object of this class will be created each time a company is added

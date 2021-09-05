@@ -9,9 +9,14 @@ public class EmployeeWage {
 	public static void main(String[] args) {
 		
 		System.out.println("Welcome to Employee Wage Computation Program");
+		
 		EmpWageBuilder empWageBuilder = new EmpWageBuilder();
 		empWageBuilder.addCompany("YML", 150, 25, 120);
 		empWageBuilder.addCompany("ABC", 120, 22, 100);
+		empWageBuilder.addCompany("XYZ", 100, 28, 150);
 		empWageBuilder.calculateWage();
+		
+		System.out.print("Total Monthly Wage of YML = ");
+		empWageBuilder.getTotalWage("YML");
 	}
 }

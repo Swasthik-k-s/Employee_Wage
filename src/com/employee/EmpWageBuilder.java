@@ -49,6 +49,8 @@ public class EmpWageBuilder implements ComputeEmpWage{
 				}
 				empTotalHour += empHour; 
 				empWorkingDay++;
+				int dailyWage = empHour * company.wagePerHour;
+				System.out.println(company.companyName + "-Day " + empWorkingDay + " Wage = " + dailyWage);
 			}
 			company.setEmpTotalWage(empTotalHour * company.wagePerHour);
 			System.out.println(company);
@@ -82,7 +84,7 @@ class CompanyEmpWage {
 
 	@Override
 	public String toString() {
-		return " [Company=" + companyName + ", Monthly Wage=" + empTotalWage + "]";
+		return "[Company=" + companyName + ", Monthly Wage=" + empTotalWage + "]";
 	}
 	
 	
